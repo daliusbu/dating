@@ -1,0 +1,70 @@
+.wrapper{
+    margin-top: 40px;
+}
+
+.form-signin-our{
+    max-width: 600px;
+    padding: 15px;
+    margin: 0 auto
+}
+
+.navbar-brand{
+    padding-top: 20px;
+}
+
+.navbar-right{
+    margin-top: 20px;
+}
+
+.navbar-right>a{
+    color: #444444;
+}
+
+.btn-orange{
+    background: #F6720E;
+    color: white;
+}
+
+.navbar-brand-logo{
+    height: 70px;
+    /*width: auto;*/
+    padding: 5px 15px;
+    /*margin: 0;*/
+    /*box-sizing: border-box;*/
+}
+
+.mb-0{
+    margin-bottom: 0;
+}
+
+.mb-30{
+    margin-bottom: 30px;
+}
+
+.mb-40{
+    margin-bottom: 40px;
+}
+
+.dark *{
+    color: #444444;
+}
+
+
+.couple-background-1{
+    background-image: url("../images/photos/homepage-couple.jpg");
+    background-color: #cccccc;
+    height: 700px;
+}
+
+.title-big{
+    margin-top: 200px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 80px;
+    font-weight: bold;
+    color: #C9C9C9;
+    text-shadow: 2px 2px #222222;
+    font-stretch: ultra-condensed;
+
+
+}
+

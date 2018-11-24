@@ -1,0 +1,31 @@
+
+<nav class="navbar navbar-default mb-0">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-left" href="/"><img class="navbar-brand-logo" src="{{ asset('/images/general/logo.gif') }}" alt=""></a>
+            <span class="navbar-brand" ><strong>{{ constant('AppBundle\\Constants\\General::SLOGAN') }}</strong></span>
+        </div>
+        <div class="navbar-right">
+            <div>
+            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+            {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
+            <a href="{{ path('fos_user_security_logout') }}">
+            {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+            </a>
+            {% else %}
+            {#<a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>#}
+                <a href="{{ path('fos_user_security_login') }}"><span><strong>{{ constant('AppBundle\\Constants\\General::LOGIN') }}</strong></span></a>
+            {% endif %}
+            </div>
+        </div>
+    </div><!--/.container-->
+</nav>
+
+
+{% block body %}{% endblock %}

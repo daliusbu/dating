@@ -33,25 +33,23 @@ class User extends BaseUser
      */
     protected $name;
 
-//    /**
-//     * @ORM\Column(type="string", length=255)
-//     *
-//     */
-//    protected $username;
+    /**
+     * @ORM\Column(type="string", length=255)
+     *
+     */
+    protected $country;
 
-//    /**
-//     * @ORM\Column(type="string", length=255)
-//     *
-//     */
-//    protected $password;
+    /**
+     * @ORM\Column(type="string", length=255)
+     *
+     */
+    protected $city;
 
-    protected $plainpassword;
-
-//    /**
-//     * @ORM\Column(type="string", length=255)
-//     *
-//     */
-//    protected $email;
+    /**
+     * @ORM\Column(type="date")
+     *
+     */
+    protected $dateOfBirth;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
@@ -59,10 +57,87 @@ class User extends BaseUser
      */
     protected $phone;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    protected $gender;
+
+    protected $plainpassword;
+
     public function __construct()
     {
         parent::__construct();
     }
+
+    /**
+     * @return mixed
+     */
+    public function getCity()
+    {
+        return $this->city;
+    }
+
+    /**
+     * @param mixed $city
+     */
+    public function setCity($city)
+    {
+        $this->city = $city;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCountry()
+    {
+        return $this->country;
+    }
+
+    /**
+     * @param mixed $country
+     */
+    public function setCountry($country)
+    {
+        $this->country = $country;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDateOfBirth()
+    {
+        return $this->dateOfBirth;
+    }
+
+    /**
+     * @param mixed $dateOfBirth
+     */
+    public function setDateOfBirth($dateOfBirth)
+    {
+        $this->dateOfBirth = $dateOfBirth;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getGender()
+    {
+        return $this->gender;
+    }
+
+    /**
+     * @param mixed $gender
+     */
+    public function setGender($gender)
+    {
+        $this->gender = $gender;
+        return $this;
+    }
+
+
 
 
 

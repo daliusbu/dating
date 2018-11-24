@@ -1,0 +1,43 @@
+{% extends 'FOS/with_navbar1.html.twig' %}
+
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block body %}
+    <div class="row">
+        <div class="couple-background-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <h1 class='title-big'>Pradėk savo MEILĖS istoriją</h1>
+
+                    </div>
+
+
+                    <div class="col-sm-4 " style="background-color: #C82829; opacity: 0.8; padding: 40px 20px; margin-top:100px;">
+
+                        <h1>Forma <i class="fa fa-female"></i></h1>
+                        {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
+
+                        
+                        {{ form_label(form.gender, 'Aš esu: ') }}
+                        {{ form_widget(form.gender) }}
+
+                        {{ form_widget(form) }}
+                        <div>
+                            <input type="submit" value="{{ 'registration.submit'|trans }}" />
+                        </div>
+                        {{ form_end(form) }}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+    <h3>Belekas</h3>
+{% endblock %}
+
+
+
