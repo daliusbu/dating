@@ -46,10 +46,11 @@ class User extends BaseUser
     protected $city;
 
     /**
-     * @ORM\Column(type="date")
+     * @ORM\Column(type="datetime", nullable=true)
      *
      */
     protected $dateOfBirth;
+
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
@@ -137,8 +138,11 @@ class User extends BaseUser
         return $this;
     }
 
-
-
+    public function setEmail($email)
+    {
+        $this->setUsername($email);
+        return parent::setEmail($email);
+    }
 
 
 }

@@ -78,3 +78,5 @@ form:
     password_confirmation: 'Pakartoti slaptažodį'
     new_password: 'Naujas slaptažodis'
     new_password_confirmation: 'Naujas slaptažodis (pakartoti)'
+    city: 'Miestas'
+    country: 'Šalis'

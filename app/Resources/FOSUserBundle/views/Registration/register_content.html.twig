@@ -15,16 +15,57 @@
 
                     <div class="col-sm-4 " style="background-color: #C82829; opacity: 0.8; padding: 40px 20px; margin-top:100px;">
 
-                        <h1>Forma <i class="fa fa-female"></i></h1>
+                        <h1 class='title' >Registruokis</h1>
                         {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
+                        <div class="mb-30">
+                                <span><strong>Aš esu: </strong></span>
 
-                        
-                        {{ form_label(form.gender, 'Aš esu: ') }}
-                        {{ form_widget(form.gender) }}
+                            <a style="color:white; margin:0 20px;" href="#">
+                                <div class="inline-block">
+                                    {{ form_widget(form.gender[1], {'label':false}) }}
+                                </div>
+                                <div class="inline-block">
+                                    <span><i class="fa fa-female fa-3x"></i></span>
+                                </div>
+                            </a>
+                            <a style="color:white; margin:0 20px;" href="#">
+                                <div class="inline-block">
+                                    {{ form_widget(form.gender[0], {'label':false}) }}
+                                </div>
+                                <div class="inline-block">
+                                    <span><i class="fa fa-male fa-3x"></i></span>
+                                </div>
+                            </a>
+
+
+                        </div>
+
+                        <div class="mb-5">
+                            {{ form_widget(form.date_of_birth.year, {'label': false, 'attr':{'placeholder': '----', 'class':'one-third' }}) }}
+                            {{ form_widget(form.date_of_birth.month, {'label': false, 'attr':{'placeholder': 'form.country', 'class':'one-third'}}) }}
+                            {{ form_widget(form.date_of_birth.day, {'label': false, 'attr':{'placeholder': 'form.country', 'class':'one-third'}}) }}
+                        </div>
+
+                        <div class="mb-5">
+                            {{ form_widget(form.email, {'label': false, 'attr':{'placeholder': 'form.email'}}) }}
+                        </div>
+                        <div class="mb-5">
+                            {{ form_widget(form.city, {'label': false, 'attr':{'placeholder': 'form.city'}}) }}
+                        </div>
+                        <div class="mb-5">
+                            {{ form_widget(form.country, {'label': false, 'attr':{'placeholder': 'form.country'}}) }}
+                        </div>
+                        <div class="mb-5">
+                            {{ form_widget(form.plainPassword.first, {'label': false, 'attr':{'placeholder': 'form.password'}}) }}
+                        </div>
+                        <div class="mb-5">
+                            {{ form_widget(form.plainPassword.second, {'label': false, 'attr':{'placeholder': 'form.password_confirmation'}}) }}
+                        </div>
+
 
                         {{ form_widget(form) }}
                         <div>
-                            <input type="submit" value="{{ 'registration.submit'|trans }}" />
+                            <input type="submit" class="btn btn-block" value="{{ 'registration.submit'|trans }}" />
                         </div>
                         {{ form_end(form) }}
 

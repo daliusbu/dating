@@ -32,9 +32,22 @@
     /*margin: 0;*/
     /*box-sizing: border-box;*/
 }
+.one-third{
+    /*margin-right: 5px;*/
+    width: 32%;
+    display: inline-block;
+}
+
+.inline-block{
+    display: inline-block;
+}
 
 .mb-0{
     margin-bottom: 0;
+}
+
+.mb-5{
+    margin-bottom: 5px;
 }
 
 .mb-30{
