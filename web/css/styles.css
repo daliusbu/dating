@@ -2,6 +2,15 @@
     margin-top: 40px;
 }
 
+@font-face{
+    font-family: Tungsten-Medium;
+    src: url("../fonts/Tungsten-Medium.ttf");
+}
+
+.font-condensed{
+    font-family: 'Tungsten-Medium', sans-serif;
+}
+
 .form-signin-our{
     max-width: 600px;
     padding: 15px;
@@ -13,11 +22,16 @@
 }
 
 .navbar-right{
+    text-align: right;
     margin-top: 20px;
 }
 
-.navbar-right>a{
+.navbar-right >a{
     color: #444444;
+}
+
+.navbar-right >a:hover{
+    color: green;
 }
 
 .btn-orange{
@@ -25,13 +39,32 @@
     color: white;
 }
 
+.btn-black{
+    background: #101010;
+    color: white;
+    font-size: 40px;
+    border: 2px solid #5eb5e0;
+}
+
+.btn-black:hover {
+    background-color: black;
+    color:white;
+    font-weight: bold;
+}
+
 .navbar-brand-logo{
-    height: 70px;
+    height: 60px;
     /*width: auto;*/
     padding: 5px 15px;
     /*margin: 0;*/
     /*box-sizing: border-box;*/
 }
+.navbar-slogan{
+    color: #2e2e2e;
+    font-size:20px;
+
+}
+
 .one-third{
     /*margin-right: 5px;*/
     width: 32%;
@@ -45,17 +78,17 @@
 .mb-0{
     margin-bottom: 0;
 }
-
 .mb-5{
     margin-bottom: 5px;
 }
-
 .mb-30{
     margin-bottom: 30px;
 }
-
 .mb-40{
     margin-bottom: 40px;
+}
+.mb-120{
+    margin-bottom: 120px;
 }
 
 .dark *{
@@ -66,18 +99,93 @@
 .couple-background-1{
     background-image: url("../images/photos/homepage-couple.jpg");
     background-color: #cccccc;
-    height: 700px;
+    height: 750px;
 }
 
-.title-big{
+.title-big {
     margin-top: 200px;
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 80px;
+    font-family: 'Tungsten-Medium', sans-serif;
+    font-size: 100px;
     font-weight: bold;
-    color: #C9C9C9;
+    color: #f6e9f2;
     text-shadow: 2px 2px #222222;
-    font-stretch: ultra-condensed;
+}
+
+.title-medium {
+    margin-top: 10px;
+    font-family: 'Tungsten-Medium', sans-serif;
+    font-size: 70px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px #222222;
+}
+
+.title-box{
+    font-family: 'Tungsten-Medium', sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    margin: 40px 0;
+    text-align: center;
+}
+
+.title-story{
+    font-family: 'Tungsten-Medium', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #ff3b4f;
+}
+
+.story{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 15px 0;
+    font-size: large;
+}
 
 
+.box-services{
+    margin: 50px 0;
+}
+
+.box-story-1{
+    margin: 50px 0;
+}
+.box-story-2{
+    margin: 50px 0 0 0;
+    background-color: #dfe6df;
+    padding: 40px 0;
+}
+
+.pl-20{
+    padding-left: 20px;
+}
+.pr-20{
+    padding-right: 20px;
+}
+.pl-pr-20{
+    padding-left: 17px;
+    padding-right: 17px;
+}
+.pt-40{
+    padding-top:15px;
+}
+
+.footer{
+    background-color: #474747;
+    color: #ededed;
+    text-align: center;
+    font-size: 16px;
+    padding: 30px 0 20px;
+}
+.footer>a{
+    color: #ededed;
+}
+
+.footer>a:hover{
+    color: #ff3b4f;
+    text-decoration: none;
+}
+
+.footer>a>p{
+    margin:0;
 }
 

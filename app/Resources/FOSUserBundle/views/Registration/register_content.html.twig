@@ -3,81 +3,167 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
 {% block body %}
-    <div class="row">
-        <div class="couple-background-1">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-8">
-                        <h1 class='title-big'>Pradėk savo MEILĖS istoriją</h1>
+    <div class="container-fluid">
+        <div class="row">
 
-                    </div>
+            <div class="couple-background-1">
+                <div class="container">
+                    <div class="row">
 
+                        <div class="col-sm-8">
+                            <h1 class='title-big'>Pradėk savo MEILĖS istoriją</h1>
+                        </div>
 
-                    <div class="col-sm-4 " style="background-color: #C82829; opacity: 0.8; padding: 40px 20px; margin-top:100px;">
-
-                        <h1 class='title' >Registruokis</h1>
-                        {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
-                        <div class="mb-30">
+                        {#---------FORM-------------------#}
+                        <div class="col-sm-4 mb-120"
+                             style="background-color: #C82829; opacity: 0.8; padding: 40px 20px; margin-top:100px;">
+                            <h1 class='title-medium font-condensed text-center'>Registruokis</h1>
+                            {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
+                            <div class="mb-30">
                                 <span><strong>Aš esu: </strong></span>
 
-                            <a style="color:white; margin:0 20px;" href="#">
-                                <div class="inline-block">
-                                    {{ form_widget(form.gender[1], {'label':false}) }}
-                                </div>
-                                <div class="inline-block">
-                                    <span><i class="fa fa-female fa-3x"></i></span>
-                                </div>
-                            </a>
-                            <a style="color:white; margin:0 20px;" href="#">
-                                <div class="inline-block">
-                                    {{ form_widget(form.gender[0], {'label':false}) }}
-                                </div>
-                                <div class="inline-block">
-                                    <span><i class="fa fa-male fa-3x"></i></span>
-                                </div>
-                            </a>
+                                <a style="color:white; margin:0 20px;" href="#">
+                                    <div class="inline-block">
+                                        {{ form_widget(form.gender[1], {'label':false}) }}
+                                    </div>
+                                    <div class="inline-block">
+                                        <span><i class="fa fa-female fa-3x"></i></span>
+                                    </div>
+                                </a>
+                                <a style="color:white; margin:0 20px;" href="#">
+                                    <div class="inline-block">
+                                        {{ form_widget(form.gender[0], {'label':false}) }}
+                                    </div>
+                                    <div class="inline-block">
+                                        <span><i class="fa fa-male fa-3x"></i></span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="mb-5">
+                                {{ form_widget(form.date_of_birth.year, {'label': false, 'attr':{'placeholder': '----', 'class':'one-third' }}) }}
+                                {{ form_widget(form.date_of_birth.month, {'label': false, 'attr':{'placeholder': 'form.country', 'class':'one-third'}}) }}
+                                {{ form_widget(form.date_of_birth.day, {'label': false, 'attr':{'placeholder': 'form.country', 'class':'one-third'}}) }}
+                            </div>
+                            <div class="mb-5">
+                                {{ form_widget(form.email, {'label': false, 'attr':{'placeholder': 'form.email'}}) }}
+                            </div>
+                            <div class="mb-5">
+                                {{ form_widget(form.city, {'label': false, 'attr':{'placeholder': 'form.city'}}) }}
+                            </div>
+                            <div class="mb-5">
+                                {{ form_widget(form.country, {'label': false, 'attr':{'placeholder': 'form.country'}}) }}
+                            </div>
+                            <div class="mb-5">
+                                {{ form_widget(form.plainPassword.first, {'label': false, 'attr':{'placeholder': 'form.password'}}) }}
+                            </div>
+                            <div class="mb-30">
+                                {{ form_widget(form.plainPassword.second, {'label': false, 'attr':{'placeholder': 'form.password_confirmation'}}) }}
+                            </div>
+                            {{ form_widget(form) }}
+                            <div>
+                                <input type="submit" class="btn btn-lg btn-block btn-black font-condensed"
+                                       value="{{ 'registration.submit'|trans }}"/>
+                            </div>
+                            {{ form_end(form) }}
+                        </div>
+                    </div>
 
+                    {#---------BOX-SERVICES-------------------#}
+                    <div class="row box-services text-center">
+                        <div class="col-sm-4">
+                            <img class="img-circle"
+                                 src="https://www.darnipora.lt/res/images/newdesign/min.services-icon-01.jpg"
+                                 alt="Generic placeholder image" width="140" height="140">
+                            <h1 class="font-condensed text-danger">REGISTRUOKITĖS</h1>
+                            <h4>Sukurkite anketą pažinčių svetainėje DarniPora.lt ir kruopščiai užpildykite psichologų
+                                sukurtą suderinamumo testą.</h4>
+                        </div><!-- /.col-lg-4 -->
+                        <div class="col-sm-4">
+                            <img class="img-circle"
+                                 src="https://www.darnipora.lt/res/images/newdesign/min.services-icon-02.jpg"
+                                 alt="Generic placeholder image" width="140" height="140">
+                            <h1 class="font-condensed text-danger">IŠSIRINKITE</h1>
+                            <h4>Užpildę testą savo anketoje matysite asmeniškai JUMS parinktus suderinamus narius.
+                                Tereikės peržiūrėti visas anketas ir išsirinkti labiausiai dominančias.</h4>
+                        </div><!-- /.col-lg-4 -->
+                        <div class="col-sm-4">
+                            <img class="img-circle"
+                                 src="https://www.darnipora.lt/res/images/newdesign/min.services-icon-03.jpg"
+                                 alt="Generic placeholder image" width="140" height="140">
+                            <h1 class="font-condensed text-danger">BENDRAUKITE!</h1>
+                            <h4>Jau nusižiūrėjote kelis favoritus? Nedelskite ir parašykite! Tai galite daryti dviem
+                                būdais: naudodami klausimų-atsakymų rinkinį „Pažinties vedlys“ arba nusiųsdami
+                                žinutę.</h4>
+                        </div><!-- /.col-lg-4 -->
+                    </div>
 
+                    {#---------BOX-STORY-1-------------------#}
+                    <div class="row box-story-1">
+                        <h1 class="text-center title-box">Pažinčių portalo sėkmės istorijos</h1>
+                        <div class="col-sm-4 pr-20">
+                            <img class="img-responsive" src="https://www.darnipora.lt//res/css/newdesign/1-story.jpg"
+                                 alt="">
+                            <h2 class="title-story">ALMEDA IR ERNESTAS</h2>
+                            <p class="story">„Ernestas yra geriausia, kas nutiko mano gyvenime“, - prisipažįsta Almeda,
+                                savo gyvenimo meilę radusi svetainėje DarniPora.lt. Šiandien Almeda ir Ernestas yra
+                                laimingai susituokusi pora, jau supuojantys savo pirmąją atžalą.</p>
                         </div>
 
-                        <div class="mb-5">
-                            {{ form_widget(form.date_of_birth.year, {'label': false, 'attr':{'placeholder': '----', 'class':'one-third' }}) }}
-                            {{ form_widget(form.date_of_birth.month, {'label': false, 'attr':{'placeholder': 'form.country', 'class':'one-third'}}) }}
-                            {{ form_widget(form.date_of_birth.day, {'label': false, 'attr':{'placeholder': 'form.country', 'class':'one-third'}}) }}
+                        <div class="col-sm-4 pl-pr-20">
+                            <img class="img-responsive" src="https://www.darnipora.lt//res/css/newdesign/2-story.jpg"
+                                 alt="">
+                            <h2 class="title-story">AUDRIUS IR AISTĖ</h2>
+                            <p class="story">„Jaučiuosi labai laimingas su ja. Aistė labai rūpestinga ir išskirtinė
+                                asmenybė. Su ja jaučiuosi savimi“, - džiaugsmo neslepia Audrius, jau seniai pamiršęs
+                                vienatvę ir savo gyvenimą sėkmingai kuriantis su moterimi, kurią jis vadina tiesiog
+                                tobula.</p>
                         </div>
-
-                        <div class="mb-5">
-                            {{ form_widget(form.email, {'label': false, 'attr':{'placeholder': 'form.email'}}) }}
+                        <div class="col-sm-4 pl-20">
+                            <img class="img-responsive" src="https://www.darnipora.lt//res/css/newdesign/3-story.jpg"
+                                 alt="">
+                            <h2 class="title-story">AUDRIUS IR AISTĖ</h2>
+                            <p class="story">„Jaučiuosi labai laimingas su ja. Aistė labai rūpestinga ir išskirtinė
+                                asmenybė. Su ja jaučiuosi savimi“, - džiaugsmo neslepia Audrius, jau seniai pamiršęs
+                                vienatvę ir savo gyvenimą sėkmingai kuriantis su moterimi, kurią jis vadina tiesiog
+                                tobula.</p>
                         </div>
-                        <div class="mb-5">
-                            {{ form_widget(form.city, {'label': false, 'attr':{'placeholder': 'form.city'}}) }}
-                        </div>
-                        <div class="mb-5">
-                            {{ form_widget(form.country, {'label': false, 'attr':{'placeholder': 'form.country'}}) }}
-                        </div>
-                        <div class="mb-5">
-                            {{ form_widget(form.plainPassword.first, {'label': false, 'attr':{'placeholder': 'form.password'}}) }}
-                        </div>
-                        <div class="mb-5">
-                            {{ form_widget(form.plainPassword.second, {'label': false, 'attr':{'placeholder': 'form.password_confirmation'}}) }}
-                        </div>
-
-
-                        {{ form_widget(form) }}
-                        <div>
-                            <input type="submit" class="btn btn-block" value="{{ 'registration.submit'|trans }}" />
-                        </div>
-                        {{ form_end(form) }}
-
                     </div>
                 </div>
+
+                {#---------BOX-STORY-2-------------------#}
+                <div class="box-story-2">
+                    <div class="container">
+                        <h1 class="text-center title-box">PAŽINTYS DARNIPORA.LT SISTEMOJE</h1>
+
+                        <div class="row">
+                            <div class="col-sm-6 pr-20">
+                                <div>
+                                    <img class="img-responsive"
+                                         src="https://www.darnipora.lt//res/images/newdesign/dating-bg.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 pl-20">
+                                <p class="story">
+                                    Pažinčių svetainėje DarniPora.lt susipažinti yra kur kas paprasčiau, nes surasti
+                                    tinkamą partnerį ar partnerę padės unikali sistema, pagal Jūsų nurodytus kriterijus atrenkanti
+                                    tinkamiausius kandidatus. Kiekvienas mūsų svetainėje užsiregistravęs žmogus turi užpildyti psichologų sudarytą
+                                    suderinamumo testą, kuris atskleidžia tikrąjį žmogaus charakterį ir poreikius.
+                                    Pagal šio testo rezultatus sistema parenka ASMENIŠKAI JUMS labiausiai tinkančius
+                                    partnerius. Jūs galite matyti charakterių, vertybių bei seksualinį suderinamumą su kiekvienu
+                                    pasiūlytu nariu, o patinkantiems kandidatams galite siųsti pažinties vedlio klausimus, kurie padės
+                                    greičiau ir įdomiau susipažinti.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {#---------FOOTER-------------------#}
+                {% include '_footer.html.twig' %}
             </div>
         </div>
-
-    </div>
     </div>
 
-    <h3>Belekas</h3>
 {% endblock %}
 
 

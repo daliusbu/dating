@@ -32,7 +32,7 @@ registration:
     check_email: 'El. pašto pranešimas išsiųstas adresu %email%. Jame rasite nuorodą, kurią aplankę, aktyvuosite savo paskyrą.'
     confirmed: 'Sveikiname, jūsų paskyra aktyvuota.'
     back: 'Grįžti atgal'
-    submit: Registruotis
+    submit: 'Kurti paskyrą'
     flash:
         user_created: 'Naudotojas sukurtas.'
     email:
@@ -80,3 +80,7 @@ form:
     new_password_confirmation: 'Naujas slaptažodis (pakartoti)'
     city: 'Miestas'
     country: 'Šalis'
+
+error:
+    login:
+        wrong_credentials: 'Neteisingi prisijungimo duomenys! Bandykite dar kartą.'

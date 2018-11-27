@@ -7,4 +7,4 @@ fos_user:
 
 fos_user_register:
     resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
-    prefix: /home
+    prefix: /

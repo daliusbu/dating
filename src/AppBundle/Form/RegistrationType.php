@@ -64,7 +64,12 @@ class RegistrationType extends AbstractType
                 'attr' => [
                 ],
             ])
-            ->add('date_of_birth', BirthdayType::class)
+            ->add('date_of_birth', BirthdayType::class, [
+                'choice_translation_domain'=>true,
+                'format' => 'yyyy-M-dd',
+                'years'=>range(date('Y')-14, 1950, -1),
+                'months'=>range(1,12),
+            ])
             ->remove('username');
 
     }
