@@ -18,8 +18,8 @@
                         <h1>Forma <i class="fa fa-female"></i></h1>
                         {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
 
-                        
-                        {{ form_label(form.gender, 'Aš esu: ') }}
+
+                        {#{{ form_label(form.gender, 'Aš esu: ') }}#}
                         {{ form_widget(form.gender) }}
 
                         {{ form_widget(form) }}
