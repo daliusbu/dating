@@ -84,10 +84,14 @@ fos_user:
     firewall_name: main
     user_class: AppBundle\Entity\User
     from_email:
-        address: "%mail_user"
-        sender_name: "%mailer_user"
+        address: daliusbu@gmail.com
+        sender_name: DatingService
 
     registration:
+        confirmation:
+            from_email:
+                address: daliusbu@gmail.com
+                sender_name: SayHi
         form:
             type: AppBundle\Form\RegistrationType
 
