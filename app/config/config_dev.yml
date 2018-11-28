@@ -44,4 +44,4 @@ swiftmailer:
     transport: gmail
 #    host: '%mailer_host%'
     username: daliusbu@gmail.com
-    password: 
+    password:
