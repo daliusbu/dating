@@ -1,9 +1,26 @@
-{% extends "@FOSUser/layout.html.twig" %}
+{% extends "base.html.twig" %}
 
 {% trans_default_domain 'FOSUserBundle' %}
 
-{% block fos_user_content %}
-<p>
-{{ 'resetting.check_email'|trans({'%tokenLifetime%': tokenLifetime})|nl2br }}
-</p>
+{% block body %}
+
+    {% block fos_user_content %}
+        <div class="form-signin-our">
+            <div class="mb-40">
+                <a href="{{ path('homepage') }}"><img src="{{ asset('images/general/logo.gif') }}" alt="Logo"></a>
+            </div>
+            <h4 class="text-center mb-30">
+                {{ 'resetting.check_email'|trans({'%tokenLifetime%': tokenLifetime})|nl2br }}
+            </h4>
+
+            <div class="dark ">
+                <a href="{{ path('fos_user_security_login') }}">Prisijungti</a>
+                <a class="pull-right" href="{{ path('fos_user_registration_register') }}">Kurti anketą</a>
+            </div>
+
+        </div>
+
+    {% endblock %}
+
 {% endblock %}
+

@@ -25,7 +25,8 @@ profile:
     flash:
         updated: 'Profilis atnaujintas.'
 change_password:
-    submit: 'Keisti slaptažodį'
+    user_email: 'El. pašto adresas'
+    submit: 'Siųsti'
     flash:
         success: 'Slaptažodis pakeistas.'
 registration:
@@ -48,10 +49,15 @@ registration:
 resetting:
 #    check_email: 'El. pašto pranešimas išsiųstas adresu %email%. Jame rasite nuorodą, kurią paspaudę, galėsite pakeisti savo slaptažodį.'
     request:
-        username: 'Naudotojo vardas arba el. paštas'
+        message:
+            Pamiršote slaptažodį? Ne bėda. <br>
+            Tiesiog žemiau esančiame laukelyje įveskite elektroninio pašto adresą, kurį naudojote registruodamiesi DarniPora.lt. Jūsų prisijungimo duomenys bus išsiųsti Jūsų nurodytu adresu.
+
+        username: 'Vartotojo el. paštas'
         submit: Tęsti
     reset:
-        submit: 'Pakeisti slaptažodį'
+        submit: 'Keisti slaptažodį'
+        title: 'Vartotojo slaptažodžio keitimas'
     flash:
         success: 'Slaptažodis pakeistas.'
     email:
@@ -63,6 +69,11 @@ resetting:
 
             Pagarbiai,
             Komanda.
+    check_email: |
+        Jūsų nurodytu adresu išsiųstas laiškas su nuoroda, kuri nukreips jus į slaptažodžio keitimo puslapį. Jeigu nurodytu el. pašto adresu laiško negavote - pasitikrinkite pašto dėžutės "Spam" katalogą.
+
+        Kitą kartą bandyti pasikeisti slaptažodį galėsite tik po 2 valandų!
+
 
 layout:
     logout: Atsijungti
