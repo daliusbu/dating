@@ -43,5 +43,5 @@ swiftmailer:
 #    delivery_address: daliusbu@gmail.com
     transport: gmail
 #    host: '%mailer_host%'
-    username: daliusbu@gmail.com
-    password:
+    username: '%mailer_user%'
+    password: '%mailer_password%'

@@ -38,3 +38,9 @@ services:
         class: AppBundle\Form\RegistrationType
         tags:
             - {name: form.type, alias: app_user_registration }
+
+    app.event.password_resetting:
+        class: AppBundle\Event\Listener\PasswordResetListener
+        arguments: [ '@router' ]
+        tags:
+            - { name: kernel.event_subscriber }

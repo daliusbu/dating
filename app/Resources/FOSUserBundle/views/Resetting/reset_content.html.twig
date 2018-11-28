@@ -1,8 +1,39 @@
-{% trans_default_domain 'FOSUserBundle' %}
+{% extends 'base.html.twig' %}
 
-{{ form_start(form, { 'action': path('fos_user_resetting_reset', {'token': token}), 'attr': { 'class': 'fos_user_resetting_reset' } }) }}
-    {{ form_widget(form) }}
-    <div>
-        <input type="submit" value="{{ 'resetting.reset.submit'|trans }}" />
+{% block body %}
+    {% trans_default_domain 'FOSUserBundle' %}
+
+    <div class="form-signin-our">
+
+        <div class="form-signin" >
+            <div class="mb-40">
+                <a href="{{ path('homepage') }}"><img src="{{ asset('images/general/logo.gif') }}" alt="Logo"></a>
+            </div>
+            <h3 class="text-center mb-40 ">
+                {{ 'resetting.reset.title'|trans }}
+            </h3>
+
+
+            {{ form_start(form, { 'action': path('fos_user_resetting_reset', {'token': token}), 'attr': { 'class': 'fos_user_resetting_reset' } }) }}
+
+            <div class="mb-20">
+                {{ form_widget(form.plainPassword.first, {'label': false, 'attr':{'placeholder': 'form.password'}}) }}
+            </div>
+            <div class="mb-30">
+                {{ form_widget(form.plainPassword.second, {'label': false, 'attr':{'placeholder': 'form.password_confirmation'}}) }}
+            </div>
+
+            <button class="btn btn-lg btn-orange btn-block mb-20" type="submit" id="_submit" name="_submit" value="{{ 'resetting.reset.submit'|trans }}"> {{ 'resetting.reset.submit'|trans }} </button>
+
+        </div>
+
+        <p class="text-center">
+            Susisiekite su mumis el. paštu info@darnipora.lt, jeigu slaptažodžio pasikeisti nepavyksta. Mes visada esame šalia, kad Jums padėtume.
+        </p>
+
+
     </div>
-{{ form_end(form) }}
+
+
+
+{% endblock %}
