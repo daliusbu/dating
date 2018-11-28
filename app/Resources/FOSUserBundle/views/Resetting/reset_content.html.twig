@@ -5,10 +5,7 @@
 
     <div class="form-signin-our">
 
-
-
-
-        <form class="form-signin" action="{{ path('fos_user_resetting_send_email') }}" method="POST" class="fos_user_resetting_request">
+        <div class="form-signin" >
             <div class="mb-40">
                 <a href="{{ path('homepage') }}"><img src="{{ asset('images/general/logo.gif') }}" alt="Logo"></a>
             </div>
@@ -26,24 +23,9 @@
                 {{ form_widget(form.plainPassword.second, {'label': false, 'attr':{'placeholder': 'form.password_confirmation'}}) }}
             </div>
 
-            {#{{ form_widget(form) }}#}
-            {#<div>#}
-                {#<input type="submit" value="{{ 'resetting.reset.submit'|trans }}" />#}
-            {#</div>#}
-            <button class="btn btn-lg btn-orange btn-block mb-20" type="submit" id="_submit" name="_submit" value="{{ 'resetting.reset.submit'|trans }}" />{{ 'resetting.reset.submit'|trans }}</button>
+            <button class="btn btn-lg btn-orange btn-block mb-20" type="submit" id="_submit" name="_submit" value="{{ 'resetting.reset.submit'|trans }}"> {{ 'resetting.reset.submit'|trans }} </button>
 
-            {{ form_end(form) }}
-
-            {#<div>#}
-                {#<label class="sr-only" for="username">{{ 'resetting.request.username'|trans }}</label>#}
-                {#<input class="form-control input-lg mb-30" type="text" id="username" name="username" placeholder="{{ 'resetting.request.username'|trans }}"required="required" />#}
-            {#</div>#}
-        </form>
-
-        {#<div class="dark small mb-30">#}
-            {#<a href="{{ path('fos_user_security_login') }}">Prisijungti?</a>#}
-            {#<a class="pull-right" href="{{ path('fos_user_registration_register') }}">Neturi anketos?</a>#}
-        {#</div>#}
+        </div>
 
         <p class="text-center">
             Susisiekite su mumis el. paštu info@darnipora.lt, jeigu slaptažodžio pasikeisti nepavyksta. Mes visada esame šalia, kad Jums padėtume.
