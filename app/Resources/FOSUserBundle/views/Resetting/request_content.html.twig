@@ -1,11 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
 {% trans_default_domain 'FOSUserBundle' %}
 
-<form action="{{ path('fos_user_resetting_send_email') }}" method="POST" class="fos_user_resetting_request">
-    <div>
-        <label for="username">{{ 'resetting.request.username'|trans }}</label>
-        <input type="text" id="username" name="username" required="required" />
+
+
+    <div class="form-signin-our">
+
+
+
+
+        <form class="form-signin" action="{{ path('fos_user_resetting_send_email') }}" method="POST" class="fos_user_resetting_request">
+            <div class="form-group mb-40">
+                <a href="{{ path('homepage') }}"><img src="{{ asset('images/general/logo.gif') }}" alt="Logo"></a>
+            </div>
+            <h4 class="text-center mb-40 ">
+                {{ 'resetting.request.message'|trans|raw }}
+            </h4>
+            <div>
+                <label class="sr-only" for="username">{{ 'resetting.request.username'|trans }}</label>
+                <input class="form-control input-lg mb-30" type="text" id="username" name="username" placeholder="{{ 'resetting.request.username'|trans }}"required="required" />
+            </div>
+            <button class="btn btn-lg btn-orange btn-block mb-20" type="submit" id="_submit" name="_submit" value="{{ 'resetting.reset.submit'|trans }}" />{{ 'resetting.reset.submit'|trans }}</button>
+        </form>
+
+        <div class="dark small mb-30">
+            <a href="{{ path('fos_user_security_login') }}">Prisijungti?</a>
+            <a class="pull-right" href="{{ path('fos_user_registration_register') }}">Neturi anketos?</a>
+        </div>
+
+        <p class="text-center">
+            Susisiekite su mumis el. paštu info@darnipora.lt, jei negaunate laiško dėl pamiršto slaptažodžio. Mes visada esame šalia, kad Jums padėtume.
+        </p>
+
+
     </div>
-    <div>
-        <input type="submit" value="{{ 'resetting.request.submit'|trans }}" />
-    </div>
-</form>
+
+
+
+{% endblock %}
