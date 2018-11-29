@@ -16,4 +16,18 @@ class DefaultController extends Controller
         return $this->render('default/index.html.twig', [
         ]);
     }
+
+    /**
+     * @Route("/phptest", name="phptest")
+     */
+    public function phptestAction(Request $request)
+    {
+        ob_start();
+        phpinfo();
+        $phpinfo = ob_get_contents();
+        ob_end_clean();
+        return $this->render('default/testing.html.twig', array(
+            'info'=>$phpinfo,
+        ));
+    }
 }
