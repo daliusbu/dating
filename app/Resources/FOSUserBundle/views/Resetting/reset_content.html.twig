@@ -5,7 +5,6 @@
 
     <div class="form-signin-our">
 
-        <div class="form-signin" >
             <div class="mb-40">
                 <a href="{{ path('homepage') }}"><img src="{{ asset('images/general/logo.gif') }}" alt="Logo"></a>
             </div>
@@ -14,7 +13,6 @@
             </h3>
 
             {{ form_start(form, { 'action': path('fos_user_resetting_reset', {'token': token}), 'attr': { 'class': 'fos_user_resetting_reset' } }) }}
-
 
             <div class="mb-20">
                 {{ form_widget(form.plainPassword.first, {'label': false, 'attr':{'placeholder': 'form.password'}}) }}
@@ -25,10 +23,9 @@
                 {{ form_errors(form.plainPassword.second) }}
             </div>
 
-            {#{{ form_widget(form) }}#}
-                <button class="btn btn-lg btn-orange btn-block mb-20" type="submit" id="_submit" name="_submit" value="{{ 'resetting.reset.submit'|trans }}"> {{ 'resetting.reset.submit'|trans }} </button>
+            <button class="btn btn-lg btn-orange btn-block mb-20" type="submit" id="_submit" name="_submit" value="{{ 'resetting.reset.submit'|trans }}"> {{ 'resetting.reset.submit'|trans }} </button>
+
             {{ form_end(form) }}
-        </div>
 
         <p class="text-center">
             Susisiekite su mumis el. paštu info@darnipora.lt, jeigu slaptažodžio pasikeisti nepavyksta. Mes visada esame šalia, kad Jums padėtume.
