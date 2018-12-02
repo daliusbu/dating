@@ -13,18 +13,15 @@
                 {{ 'resetting.reset.title'|trans }}
             </h3>
 
-
             {{ form_start(form, { 'action': path('fos_user_resetting_reset', {'token': token}), 'attr': { 'class': 'fos_user_resetting_reset' } }) }}
-
-            <div class="mb-20">
-                {{ form_widget(form.plainPassword.first, {'label': false, 'attr':{'placeholder': 'form.password'}}) }}
-            </div>
-            <div class="mb-30">
-                {{ form_widget(form.plainPassword.second, {'label': false, 'attr':{'placeholder': 'form.password_confirmation'}}) }}
-            </div>
-
-            <button class="btn btn-lg btn-orange btn-block mb-20" type="submit" id="_submit" name="_submit" value="{{ 'resetting.reset.submit'|trans }}"> {{ 'resetting.reset.submit'|trans }} </button>
-
+                <div class="mb-20">
+                    {{ form_widget(form.plainPassword.first, {'label': false, 'attr':{'placeholder': 'form.password'}}) }}
+                </div>
+                <div class="mb-30">
+                    {{ form_widget(form.plainPassword.second, {'label': false, 'attr':{'placeholder': 'form.password_confirmation'}}) }}
+                </div>
+                <button class="btn btn-lg btn-orange btn-block mb-20" type="submit" id="_submit" name="_submit" value="{{ 'resetting.reset.submit'|trans }}"> {{ 'resetting.reset.submit'|trans }} </button>
+            {{ form_end(form) }}
         </div>
 
         <p class="text-center">

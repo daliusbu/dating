@@ -14,9 +14,14 @@
             <div class="form-group mb-40">
                 <a href="{{ path('homepage') }}"><img src="{{ asset('images/general/logo.gif') }}" alt="Logo"></a>
             </div>
-            <h4 class="text-center mb-40 ">
+            <h4 class="mb-40 ">
                 {{ 'resetting.request.message'|trans|raw }}
             </h4>
+
+            {% for flashMessage in app.flashes('error') %}
+                <div class="alert alert-danger"><strong>{{ flashMessage|trans }}</strong></div>
+            {% endfor %}
+
             <div>
                 <label class="sr-only" for="username">{{ 'resetting.request.username'|trans }}</label>
                 <input class="form-control input-lg mb-30" type="text" id="username" name="username" placeholder="{{ 'resetting.request.username'|trans }}"required="required" />
