@@ -47,7 +47,7 @@ class PasswordResetListener implements EventSubscriberInterface
     {
         if(null === $event->getUser()){
             $session = new Session();
-            $session->getFlashBag()->set('error', 'resetting.flash.user_not_found');
+            $session->getFlashBag()->set('danger', 'resetting.flash.user_not_found');
             $url = $this->router->generate('fos_user_resetting_request');
             $event->setResponse(new RedirectResponse($url));
         }

@@ -14,12 +14,18 @@
             </h3>
 
             {{ form_start(form, { 'action': path('fos_user_resetting_reset', {'token': token}), 'attr': { 'class': 'fos_user_resetting_reset' } }) }}
-                <div class="mb-20">
-                    {{ form_widget(form.plainPassword.first, {'label': false, 'attr':{'placeholder': 'form.password'}}) }}
-                </div>
-                <div class="mb-30">
-                    {{ form_widget(form.plainPassword.second, {'label': false, 'attr':{'placeholder': 'form.password_confirmation'}}) }}
-                </div>
+
+
+            <div class="mb-20">
+                {{ form_widget(form.plainPassword.first, {'label': false, 'attr':{'placeholder': 'form.password'}}) }}
+                {{ form_errors(form.plainPassword.first) }}
+            </div>
+            <div class="mb-30">
+                {{ form_widget(form.plainPassword.second, {'label': false, 'attr':{'placeholder': 'form.password_confirmation'}, 'invalid_message': 'Passwords dont match'}) }}
+                {{ form_errors(form.plainPassword.second) }}
+            </div>
+
+            {#{{ form_widget(form) }}#}
                 <button class="btn btn-lg btn-orange btn-block mb-20" type="submit" id="_submit" name="_submit" value="{{ 'resetting.reset.submit'|trans }}"> {{ 'resetting.reset.submit'|trans }} </button>
             {{ form_end(form) }}
         </div>
