@@ -60,6 +60,7 @@ resetting:
         title: 'Vartotojo slaptažodžio keitimas'
     flash:
         success: 'Slaptažodis pakeistas.'
+        user_not_found: 'Tokio vartotojo nėra. Bandykite dar kartą.'
     email:
         subject: 'Slaptažodžio keitimas'
         message: |

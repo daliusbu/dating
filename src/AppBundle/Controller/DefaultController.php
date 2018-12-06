@@ -13,6 +13,10 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
+        $belekas = 'belekas';
+        $vienas = 'viieans';
+        $du = 123;
+
         return $this->render('default/index.html.twig', [
         ]);
     }

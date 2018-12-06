@@ -10,13 +10,20 @@
 
 
 
-        <form class="form-signin" action="{{ path('fos_user_resetting_send_email') }}" method="POST" class="fos_user_resetting_request">
+        <form class="form-signin fos_user_resetting_request" action="{{ path('fos_user_resetting_send_email') }}" method="POST">
             <div class="form-group mb-40">
                 <a href="{{ path('homepage') }}"><img src="{{ asset('images/general/logo.gif') }}" alt="Logo"></a>
             </div>
             <h4 class="text-center mb-40 ">
                 {{ 'resetting.request.message'|trans|raw }}
             </h4>
+
+            {% for msg in app.session.flashBag.get('error') %}
+                <div class="alert alert-danger">
+                    {{ msg|trans }}
+                </div>
+            {% endfor %}
+
             <div>
                 <label class="sr-only" for="username">{{ 'resetting.request.username'|trans }}</label>
                 <input class="form-control input-lg mb-30" type="text" id="username" name="username" placeholder="{{ 'resetting.request.username'|trans }}"required="required" />
