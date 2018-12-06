@@ -10,11 +10,11 @@
 
 
 
-        <form class="form-signin fos_user_resetting_request" action="{{ path('fos_user_resetting_send_email') }}" method="POST">
+        <form class="form-signin" action="{{ path('fos_user_resetting_send_email') }}" method="POST" class="fos_user_resetting_request">
             <div class="form-group mb-40">
                 <a href="{{ path('homepage') }}"><img src="{{ asset('images/general/logo.gif') }}" alt="Logo"></a>
             </div>
-            <h4 class="text-center mb-40 ">
+            <h4 class="mb-40 ">
                 {{ 'resetting.request.message'|trans|raw }}
             </h4>
 
